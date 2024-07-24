@@ -1,0 +1,68 @@
+												Library Functions Manual
+
+NAME:
+
+_printf - formatted output conversion
+
+SYNOPSIS:
+
+#include <stdio.h>
+
+int printf(const char *format, ...);
+
+DESCRIPTION:
+
+The printf function produces output according to a format specified by the format argument. It writes to the standard output (stdout).
+
+The format string may contain format specifiers, which are replaced by the values specified in subsequent arguments,
+formatted as requested. The  following format specifiers are supported for the purposes of this manual entry:
+
+%c: The int argument is converted to an unsigned char, and the resulting character is written.
+
+%s: The const char * argument is expected to be a pointer to an array
+of character type (pointer to a string). Characters from the array are written up to (but not including) the terminating null byte.
+
+%d: The int argument is converted to signed decimal notation.
+
+%i: Equivalent to %d.
+
+%%: A '%' character is written. No argument is converted. The complete conversion specification is '%%'.
+
+RETURN VALUE:
+
+Upon successful return, these functions return the number of characters printed
+(excluding the null byte used to end output to strings).
+If an output error is encountered, a negative value is returned.
+
+EXAMPLES:
+
+Basic usage of printf:
+
+#include <stdio.h>
+
+int main()
+{
+printf("Character: %c\n", 'A');
+ // Output: Character: A
+
+printf("String: %s\n", "Hello, World!");
+ // Output: String: Hello, World!
+
+printf("Signed Decimal: %d\n", -123);
+ // Output: Signed Decimal: -123
+
+printf("Signed Integer: %i\n", 456);
+ // Output: Signed Integer: 456
+
+printf("Percent Sign: %%\n");
+ // Output: Percent Sign: %
+
+return 0;
+}
+
+This program demonstrates the use of %c, %s, %d, %i, and %% format specifiers with the printf function.
+
+AUTHOR:
+
+Yanis MEFTOUH
+Benoit MARIN
