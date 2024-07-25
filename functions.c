@@ -50,26 +50,26 @@ int print_percent(va_list args)
  */
 int print_integer(va_list args)
 {
-    int number = va_arg(args, int);
-    int temp, divisor = 1, length = 0;
+	int number = va_arg(args, int);
+	int temp, divisor = 1, length = 0;
 
-    if (number < 0)
+	if (number < 0)
 	{
-        _putchar('-');
-        length++;
-        number = -number;
-    }
-    temp = number;
-    while (temp > 9)
+		_putchar('-');
+		length++;
+		number = -number;
+	}
+	temp = number;
+	while (temp > 9)
 	{
-        temp /= 10;
-        divisor *= 10;
-    }
-    while (divisor > 0)
+		temp /= 10;
+		divisor *= 10;
+	}
+	while (divisor > 0)
 	{
-        _putchar((number / divisor) % 10 + '0');
-        divisor /= 10;
-        length++;
-    }
-    return length;
+		_putchar((number / divisor) % 10 + '0');
+		divisor /= 10;
+		length++;
+	}
+	return (length);
 }
