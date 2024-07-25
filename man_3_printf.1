@@ -1,16 +1,16 @@
-												Library Functions Manual
+.TH man 3 "25 July 2024" "1.0" "_printf man page"
 
-NAME:
+.SH NAME
 
 _printf - formatted output conversion
 
-SYNOPSIS:
+.SH SYNOPSIS
 
 #include <stdio.h>
 
 int printf(const char *format, ...);
 
-DESCRIPTION:
+.SH DESCRIPTION
 
 The printf function produces output according to a format specified by the format argument. It writes to the standard output (stdout).
 
@@ -28,13 +28,13 @@ of character type (pointer to a string). Characters from the array are written u
 
 %%: A '%' character is written. No argument is converted. The complete conversion specification is '%%'.
 
-RETURN VALUE:
+.SH RETURN VALUE
 
 Upon successful return, these functions return the number of characters printed
 (excluding the null byte used to end output to strings).
 If an output error is encountered, a negative value is returned.
 
-EXAMPLES:
+.SH EXAMPLES
 
 Basic usage of printf:
 
@@ -62,7 +62,7 @@ return 0;
 
 This program demonstrates the use of %c, %s, %d, %i, and %% format specifiers with the printf function.
 
-AUTHOR:
+.SH AUTHOR:
 
 Yanis MEFTOUH
 Benoit MARIN
