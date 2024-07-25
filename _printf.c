@@ -22,7 +22,8 @@ int _printf(const char *format, ...)
 		if (format[index] == '%')
 		{
 			index++;
-			if (format[index] == 'c' || format[index] == 's' || format[index] == '%')
+			if (format[index] == 'c' || format[index] == 's' || format[index] == '%'
+			|| format[index] == 'd' || format[index] == 'i')
 			{
 				func = get_format(&format[index]);
 				func(args);
