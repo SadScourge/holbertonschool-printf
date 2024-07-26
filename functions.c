@@ -60,7 +60,7 @@ int print_integer(va_list args)
 		number = -number;
 	}
 	temp = number;
-	while (temp > 9)
+	while (temp >= 10)
 	{
 		temp /= 10;
 		divisor *= 10;
