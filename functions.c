@@ -22,7 +22,7 @@ int print_string(va_list args)
 
 	if (string == NULL)
 	{
-		string = "(nil)";
+		string = "(null)";
 	}
 	for (index = 0; string[index]; index++)
 	{
