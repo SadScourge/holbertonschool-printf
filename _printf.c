@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 			index++;
 			if (format[index] == '\0')
 			{
-				return (count);
+				return (-1);
 			}
 			func = get_format(&format[index]);
 			if (func != NULL)
