@@ -14,20 +14,27 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 	if (!format)
-	{
 		return (-1);
-	}
 	while (format[index])
-	{
 		if (format[index] == '%')
 		{
 			index++;
-			if (format[index] == 'c' || format[index] == 's' || format[index] == '%'
-			|| format[index] == 'd' || format[index] == 'i')
+			if (format[index] == '\0')
 			{
-				func = get_format(&format[index]);
-				func(args);
+				_putchar('%');
 				count++;
+			}
+			func = get_format(&format[index]);
+			if (func != NULL)
+			{
+				count += func(args);
+				index++;
+			}
+			else
+			{
+				_putchar('%');
+				_putchar(format[index]);
+				count += 2;
 				index++;
 			}
 		}
@@ -37,7 +44,6 @@ int _printf(const char *format, ...)
 			index++;
 			count++;
 		}
-	}
 	va_end(args);
 	return (count);
 }
