@@ -1,5 +1,7 @@
 <h1 style="text-align: center;">Printf Function</h1>
 
+## Description
+
 This project is a simpler recreation of the function printf in C.
 It was made for [Holberton School](https://www.holbertonschool.com/)
 
@@ -12,20 +14,28 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ## Requirements
 
 - Ubuntu 20
-- GCC
-- Git
+- GCC 11.4
+- Git 2.34.1
 
-## examples
+## Examples
 
 ```c
-_printf("Il y a %d pommes dans le panier.", 5);
-// Affiche "Il y a 5 pommes dans le panier."
-_printf("Le prix est %.2f euros.", 12.3456);  
-// Affiche "Le prix est 12.35 euros.
+_printf("I love %c language.", C);  
+// Affiche "I love C language."
+_printf("My name is %s.", Lloyd);  
+// Affiche "My name is Lloyd."
+_printf("I have 24%% battery left.");  
+// Affiche "I have 24% battery left."
+_printf("There is %d apple in the basket.", 5);
+// Affiche "There is 5 apple in the basket."
 ```
 
 ## Man page
 
+You can access the man page using the following command:
+```bash
+man ./man_3_printf.1
+```
 
 ## Testing
 We tested the program using `valgrind` with the following command:
@@ -33,6 +43,8 @@ We tested the program using `valgrind` with the following command:
 valgrind ./_printf
 ```
 ## Flowchart
+
+<img title="flowchart" alt="_printf Flowchart" src="/assets/flowchart.svg">
 
 ## Authors
 #### [Yanis MEFTOUH](https://github.com/yanis59100)
